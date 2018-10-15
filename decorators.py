@@ -28,7 +28,8 @@ def decorator_creator(creator_name):
     def decorator(func):
         print("Данная функция создает декоратор и тоже выполняется один раз при его создании")
         def wrapper(*args, **kwargs):
-            print("Данная функция будет выполняться каждый раз при вызове декорированной функции и создана она {}".format(creator_name))
+            print("Данная функция будет выполняться каждый раз при вызове декорированной функции \
+            и создана она {}".format(creator_name))
             print("Принятые аргументы:", args, **kwargs)
             func(*args, **kwargs)
         return wrapper
